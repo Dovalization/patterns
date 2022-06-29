@@ -1,17 +1,17 @@
 import { User } from "../../../models/User";
 import { ICreateUserDTO, IUsersRepository } from "./IUsersRepository";
 
-class UsersRepository implements IUsersRepository {
-  private static instance: UsersRepository | null = null;
+class UsersRepositoryClass implements IUsersRepository {
+  private static instance: UsersRepositoryClass | null = null;
   private users: User[] = [];
 
   private constructor() {}
 
-  static getInstance(): UsersRepository {
-    if (UsersRepository.instance === null) {
-      UsersRepository.instance = new UsersRepository();
+  static getInstance(): UsersRepositoryClass {
+    if (UsersRepositoryClass.instance === null) {
+      UsersRepositoryClass.instance = new UsersRepositoryClass();
     }
-    return UsersRepository.instance;
+    return UsersRepositoryClass.instance;
   }
 
   create({ age, name }: ICreateUserDTO): void {
@@ -70,4 +70,4 @@ class UsersRepository implements IUsersRepository {
   }
 }
 
-export { UsersRepository as MyDatabaseClassic };
+export { UsersRepositoryClass as UsersRepository };
