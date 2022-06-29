@@ -1,4 +1,4 @@
-import { User } from "../../../models/User";
+import { User } from "../../models/User";
 import { IUsersRepository } from "./IUsersRepository";
 
 const users: User[] = [];
@@ -69,4 +69,4 @@ const usersRepositoryModule: IUsersRepository = {
   },
 };
 
-export { usersRepositoryModule as UsersRepository };
+export { usersRepositoryModule };

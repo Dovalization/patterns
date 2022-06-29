@@ -1,4 +1,4 @@
-import { User } from "../../../models/User";
+import { User } from "../../models/User";
 import { ICreateUserDTO, IUsersRepository } from "./IUsersRepository";
 
 class UsersRepositoryClass implements IUsersRepository {
@@ -70,4 +70,4 @@ class UsersRepositoryClass implements IUsersRepository {
   }
 }
 
-export { UsersRepositoryClass as UsersRepository };
+export { UsersRepositoryClass };
